@@ -1,13 +1,13 @@
 {
-  "name": "express-server",
-  "version": "1.0.0",
-  "description": "",
+  "name": "express-server-top-spots",
+  "version": "1.0.1",
+  "description": "A simple express server that serves my San Diego Top Spots web app",
   "main": "index.js",
   "scripts": {
     "test": "mocha test --exit",
     "start": "node server/index.js"
   },
-  "author": "",
+  "author": "Olivia Reed",
   "license": "ISC",
   "dependencies": {
     "morgan": "^1.8.2"

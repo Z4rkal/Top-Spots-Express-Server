@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    // write your code here
+    //Gets the data.json file from the server
     $.getJSON('/data', function (data) {
-        //console.log('Name: ' + data[1].name);
+        //Then builds the table from the data
         data.forEach(function (element) {
             var row = $('#table-body');
             row.append('<tr class="table-row"><td class="loc-name">' + element.name + '</td>' +
