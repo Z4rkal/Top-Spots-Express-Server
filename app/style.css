@@ -1,0 +1,64 @@
+#page-head {
+    font-style: italic;
+    display: inline;   
+}
+
+#page-desc {
+    font-style: italic;
+    display: inline;
+    font-size: 1em;
+    font-weight: 100;
+}
+
+#location-table {
+    width: 100%;
+}
+
+#name-head, #description-head, #link-head {
+    background-color: white;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+}
+
+.table-row {
+    margin: 0px;
+    padding: 5px;
+}
+
+.table-row:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+
+.table-row:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+.loc-name, .loc-desc, .loc-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+
+.loc-name {
+    width: 35%;
+}
+
+.loc-desc {
+    width: 52.5%;
+}
+
+.loc-link {
+    width: 12.5%;
+}
+
+.link-text {
+    text-decoration: none;
+    background-color: olive;
+    padding: 0.4em;
+    border: 1px solid goldenrod;
+    margin: 0.2em;
+    border-radius: 6px;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+}

@@ -4,18 +4,33 @@ const data = require('./data.json');
 // create your express server below
 var app = express();
 
-app.get('/', function(req,res){
+
+// add your routes and middleware below
+app.get('/', function (req, res) {
     console.log('Receiving GET request for: /');
-    res.writeHead(200,{'Content-Type' : 'text/html'});
-    res.end('It\'s working :)');
+    res.sendFile('index.html', { root: './app' });
 });
 
-app.get('/data', function(req,res){
+app.get('/data', function (req, res) {
     console.log('Receiving GET request for: /data');
     res.json(data);
 });
 
-// add your routes and middleware below
+app.get('/style', function(req,res){
+    console.log('Receiving GET request for: ' + req.url);
+    res.sendFile('style.css', { root: './app'});
+});
+
+app.get('/js', function(req,res){
+    console.log('Receiving GET request for: ' + req.url);    
+    res.sendFile('main.js', { root: './app'});
+});
+
+app.get('/*', function (req, res) {
+    console.log('Receiving GET request for an invalid path');
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    res.end('404 : File not found');
+});
 
 // finally export the express application
 module.exports = app;
